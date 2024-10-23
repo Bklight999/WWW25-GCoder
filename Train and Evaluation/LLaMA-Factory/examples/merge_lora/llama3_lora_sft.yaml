@@ -1,0 +1,15 @@
+### Note: DO NOT use quantized model or quantization_bit when merging lora adapters
+
+### model
+model_name_or_path:  Qwen/Qwen2.5-Coder-7B-Instruct #meta-llama/Meta-Llama-3.1-8B-Instruct
+adapter_name_or_path: saves/qwen/lora/dpo_qwen_1949
+#adapter_name_or_path: saves/llama3.1-8b/lora/GraphCopilot_plus_v1/checkpoint-9000
+# adapter_name_or_path: saves/llama3.1-8b/lora/GraphCopilot_plus/checkpoint-4500
+template: qwen
+finetuning_type: lora
+
+### export
+export_dir: models/Graphwiz-plus_v1_qwen_dpo_131949
+export_size: 2
+export_device: cpu
+export_legacy_format: false

@@ -1,0 +1,4 @@
+model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct
+adapter_name_or_path: /data/qifanzhang/LLaMA-Factory/saves/llama3-8b/lora/Graphspider_sft_0822_v3
+template: llama3
+finetuning_type: lora
