@@ -28,6 +28,24 @@ Large Language Models (LLMs) have demonstrated strong reasoning abilities, makin
   <img src="./figures/showcase2.png" alt="Image 2" style="width: 50%;">
 </div>
 
+### Train
+```bash
+git clone --depth 1 https://github.com/hiyouga/LLaMA-Factory.git
+cd Train and Evaluation/LLaMA-Factory
+pip install -e ".[torch,metrics]"
+```
+
+#### SFT
+```bash
+llamafactory-cli train examples/train_lora/llama3_lora_sft.yaml
+```
+
+#### RLCF
+```bash
+llamafactory-cli train examples/train_lora/llama3_lora_dpo.yaml
+```
+
+
 ### Run GCoder
 ```bash
 cd Train and Evaluation
