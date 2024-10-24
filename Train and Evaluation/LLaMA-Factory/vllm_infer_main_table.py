@@ -54,7 +54,7 @@ if __name__ == '__main__':
     # tokenizer, model = get_tokenizer_and_model(args.llm)
     
     # inference
-    file_name = '/LLaMA-Factory/Evaluate_dataset/GraphInstruct/'+task_name+'/'+task_name+'_test.json'
+    file_name = '/LLaMA-Factory/Evaluate_dataset/main_table/'+task_name+'/'+task_name+'_test.json'
     with open(file_name,'r') as f:
         all_data = json.load(f)
     results = 'results/'
