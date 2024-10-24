@@ -28,6 +28,12 @@ Large Language Models (LLMs) have demonstrated strong reasoning abilities, makin
   <img src="./figures/showcase2.png" alt="Image 2" style="width: 50%;">
 </div>
 
+### Environment Setup
+```bash
+cd Train and Evaluation/LLaMA-Factory
+pip install -r requirements.txt
+```
+
 ### Train
 ```bash
 git clone --depth 1 https://github.com/hiyouga/LLaMA-Factory.git
@@ -51,4 +57,6 @@ llamafactory-cli train examples/train_lora/llama3_lora_dpo.yaml
 cd Train and Evaluation
 python vllm_infer_main_table.py
 ```
+
+
 
