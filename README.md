@@ -96,7 +96,7 @@ llamafactory-cli train examples/train_lora/llama3_lora_dpo.yaml
 ```
 
 
-### Run GCoder
+### Evaluation
 ```bash
 cd Train and Evaluation
 python vllm_infer_main_table.py
