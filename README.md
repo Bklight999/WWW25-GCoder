@@ -28,4 +28,9 @@ Large Language Models (LLMs) have demonstrated strong reasoning abilities, makin
   <img src="./figures/showcase2.png" alt="Image 2" style="width: 50%;">
 </div>
 
-### Quick Start
+### Run GCoder
+```bash
+cd Train and Evaluation
+python vllm_infer_main_table.py
+```
+
