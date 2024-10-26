@@ -34,49 +34,6 @@ cd Train and Evaluation/LLaMA-Factory
 pip install -r requirements.txt
 ```
 
-### Quick Start
-```python
-import os
-import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
-
-# Load the tokenizer
-tokenizer = AutoTokenizer.from_pretrained('meta-llama/Meta-Llama-3.1-8B-Instruct')
-
-# Load the model with quantization
-model = AutoModelForCausalLM.from_pretrained(
-    'GCoder/Llama3.1-8B',
-    local_files_only=False,
-    torch_dtype=torch.float16  # Use float16 precision
-)
-model.eval()
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model.to(device)
-task_name = 'kcore'
-# Input text
-input_text ='<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n'
-input_text =  input_text + """
-[Prompt]: 
-Given an undirected graph where Node QPX is connected to nodes QDB, FOQ, BHA, EJG, EBX, SVP, LJJ, MZJ, EZR; Node QDB is connected to nodes FOQ, EJG, AAL, EBX, SVP, LJJ, EZR, QPX; Node FOQ is connected to nodes BHA, EJG, EBX, LJJ; Node BHA is connected to nodes EJG, SVP, MZJ, QPX, FOQ; Node EJG is connected to nodes AAL, EBX, EZR, QPX, QDB, WSE; Node EBX is connected to nodes LJJ, EZR, BHA, EJG; Node SVP is connected to nodes MZJ, QDB, EJG, AAL; Node LJJ is connected to nodes EJG, SVP; Node MZJ is connected to nodes QDB, WSE, BHA, AAL, EBX, SVP; Node EZR is connected to nodes QDB, EJG, AAL, SVP, TGJ; Node AAL is connected to nodes SVP, LJJ, MZJ, EZR, QPX, FOQ, WSE, EJG; Node WSE is connected to nodes EJG, AAL, TGJ, QPX, FOQ; Node TGJ is connected to nodes LJJ, EZR, BHA, EJG, SVP. The task is to find the k-core of this graph, k=3.
-Output the nodes of the k-core subgraph.
-"""
-
-text = "Provide the code to solve this problem without any explanation."
-
-# Encode input
-inputs = tokenizer(input_text, return_tensors='pt').to(device)
-
-# Inference
-with torch.no_grad():
-    outputs = model.generate(**inputs, max_new_tokens=3000)
-
-# Decode output
-output_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
-
-# Save output_text to a text file
-with open(f'./output/{task_name}.txt', 'w', encoding='utf-8') as f:
-    f.write(output_text)
-```
 
 ### Train
 ```bash
