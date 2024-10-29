@@ -40,7 +40,6 @@ pip install -r requirements.txt
 
 ### Train
 ```bash
-git clone --depth 1 https://github.com/hiyouga/LLaMA-Factory.git
 cd Train and Evaluation/LLaMA-Factory
 pip install -e ".[torch,metrics]"
 ```
