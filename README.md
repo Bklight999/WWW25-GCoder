@@ -29,7 +29,7 @@ Large Language Models (LLMs) have demonstrated strong reasoning abilities, makin
 </div>
 
 ### Models and VectorDB
-https://huggingface.co/Bklight999/GCoder (uploading)
+https://huggingface.co/Bklight999/GCoder
 
 ### Environment Setup
 ```bash
