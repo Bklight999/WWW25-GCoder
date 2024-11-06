@@ -11,9 +11,9 @@ Large Language Models (LLMs) have demonstrated strong reasoning abilities, makin
 
 ### Framework
 
-<p align="center">
-<img src="figures\framework.png" alt="" align=center / width="800px">
-</p>
+<div align="center">
+<img src="figures\framework.png" width="800px">
+</div>
 
 ### Main Results
 
