@@ -18,14 +18,14 @@ Large Language Models (LLMs) have demonstrated strong reasoning abilities, makin
 ### Main Results
 
 <p align="center">
-<img src="/figures/main_results.png" alt="" align=center / width="800px">
+<img src="figures\main_results.png" alt="" align=center / width="800px">
 </p>
 
 
 #### Showcases of prompt and LLM generated code
 <div style="display: flex; justify-content: space-between;">
-  <img src="/figures/showcase1.png" alt="Image 1" style="width: 50%;">
-  <img src="/figures/showcase2.png" alt="Image 2" style="width: 50%;">
+  <img src="figures\showcase1.png" alt="Image 1" style="width: 50%;">
+  <img src="figures\showcase2.png" alt="Image 2" style="width: 50%;">
 </div>
 
 ### Models and VectorDB
